@@ -6,9 +6,26 @@ module spi_master #(parameter
 ) (
     input wire clk,
     input wire aReset,
-    input reg data_in,
-    output reg data_out 
+    input wire i_stream_in,
+    output wire o_stream_out,
+    input wire i_datapck_in,
+    output wire o_datapck_out
 
 );
     
+// Reg declarations
+reg datapck_in;
+reg datapck_out;
+reg stream_in;
+reg stream_out;
+
+// Wire declarations
+
+// Wire assignments
+
+assign o_stream_out = stream_out;
+assign o_datapck_out = datapck_out;
+
+
+
 endmodule
